@@ -76,6 +76,57 @@
 				"type": "fallback"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					}
+				],
+				"name": "comfort",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					}
+				],
+				"name": "comfortRes",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "destruct",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "getBalance",
 				"outputs": [
@@ -97,6 +148,25 @@
 					}
 				],
 				"name": "hello",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					}
+				],
+				"name": "helloRes",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -140,7 +210,47 @@
 		],
 		"devdoc": {
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"comfort(string)": {
+					"details": "只能在step为2的时候调用，只能领导调用，并且只能说“同志们辛苦了”",
+					"params": {
+						"content": "：当前同志们说的内容"
+					},
+					"returns": {
+						"_0": "当前的调用状态，true为成功"
+					}
+				},
+				"comfortRes(string)": {
+					"details": "只能在step为3的时候调用，只能同志们调用，并且只能说“为人民服务”",
+					"params": {
+						"content": "：当前同志们说的内容"
+					},
+					"returns": {
+						"_0": "当前的调用状态，true为成功"
+					}
+				},
+				"destruct()": {
+					"details": "只能在step为4的时候调用，只能领导调用",
+					"returns": {
+						"_0": "当前的调用状态，true为成功"
+					}
+				},
+				"hello(string)": {
+					"details": "只能在step为0的时候调用",
+					"params": {
+						"content": "：当前领导说的内容 return 当前的调用状态，true为成功"
+					}
+				},
+				"helloRes(string)": {
+					"details": "只能在step为1的时候调用，只能同志们调用，并且只能说“领导好”",
+					"params": {
+						"content": "：当前同志们说的内容"
+					},
+					"returns": {
+						"_0": "当前的调用状态，true为成功"
+					}
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -152,7 +262,23 @@
 				]
 			},
 			"kind": "user",
-			"methods": {},
+			"methods": {
+				"comfort(string)": {
+					"notice": "用于领导说“同志们辛苦了”"
+				},
+				"comfortRes(string)": {
+					"notice": "用于同志们说\"为人民服务\""
+				},
+				"destruct()": {
+					"notice": "用于领导对合约的销毁"
+				},
+				"hello(string)": {
+					"notice": "用于领导说“同志们好”"
+				},
+				"helloRes(string)": {
+					"notice": "用于同志们说\"领导好\""
+				}
+			},
 			"version": 1
 		}
 	},
@@ -173,11 +299,11 @@
 	},
 	"sources": {
 		"contracts/HelloComrades.sol": {
-			"keccak256": "0x50a20322e248f64793314dfec5fe5bfaab246120b910c2b1198553bd65cb6543",
+			"keccak256": "0xd9e3c0bb35fa5354ddc60a06bf98e62f7731b803bce8773089bcac0dd29a6554",
 			"license": "unlicensed",
 			"urls": [
-				"bzz-raw://c56e2451db3df3429084863b7aff9dc6e2b706ab542b02364bdb91f4861f63c6",
-				"dweb:/ipfs/QmUvBzXifZf5oUEdfpK5SXN1HNp6j3tVL731DpjuXvCx6N"
+				"bzz-raw://00dcfd0034c216a8b1366403a12baf3347f0e967fd6f5f8b4e1b1126077dc74b",
+				"dweb:/ipfs/QmdfzZnzkjAofYtBPewSZneamcTM8Dvq8H7aB7wGZstKM5"
 			]
 		}
 	},
