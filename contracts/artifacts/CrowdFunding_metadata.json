@@ -48,6 +48,45 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "close",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "contribute",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "funders",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -55,7 +94,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "fundereKey",
+				"name": "fundersKey",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -67,19 +106,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "fundersInserted",
+				"inputs": [],
+				"name": "fundersLength",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bool"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -125,7 +158,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/05.CrowdFunding.sol": "Bank"
+			"contracts/05.CrowdFunding.sol": "CrowdFunding"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -140,11 +173,11 @@
 	},
 	"sources": {
 		"contracts/05.CrowdFunding.sol": {
-			"keccak256": "0x0771966db5e8c420e9a9af88246e210cb427d2573e1a5e7eeae5eeda95565a29",
+			"keccak256": "0x7ad70f5c124fdb12dcce19cb4da89e7dd4f4ebcae3a0f92e944629202ce5b35f",
 			"license": "unlicensed",
 			"urls": [
-				"bzz-raw://e0e55cab14465f7d4b407b4577a1b4e452176e3cc32d3c0eab7ccd46c37c19ba",
-				"dweb:/ipfs/QmSkPie6QjRNF2jv14Chbgo5hoYFgUFqVf8vXCZqWGRwtf"
+				"bzz-raw://b08a1cca070bcaeaf2f460aca431eb8bffb0b43951c5bd3d2cbeba419f44ec16",
+				"dweb:/ipfs/QmeY7JTK6cwsBxeggDcHWirfre7UQHh2wb5H9rtBDu8KUu"
 			]
 		}
 	},
